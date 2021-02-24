@@ -8,4 +8,4 @@ if(var1 > var2 && var1 > var3 ){
     console.log("var2 é a maior variavel")
 } else {
     console.log("var3 é a maior variavel")
-}
+} 

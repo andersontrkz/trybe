@@ -63,16 +63,51 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
 // exercicio 8 
 
-let numbers = [];
+// let numbers = [];
 
-for (let indexArray = 1 ; indexArray < 25; indexArray += 1) {
-    numbers.push(indexArray);
+// for (let indexArray = 1 ; indexArray < 25; indexArray += 1) {
+//     numbers.push(indexArray);
+// }
+// console.log(numbers);
+
+// //exercicio 9
+
+// for (let indexDiv = 0; indexDiv < numbers.length; indexDiv += 1) {
+//    numbers[indexDiv] = numbers[indexDiv] /2;
+// }
+// console.log(numbers);
+
+
+// exercicios Bônus 1
+
+let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+
+for (let i = 1; i < numbers.length; i++) {
+  for (let j = 0; j < i; j++) {
+    if (numbers[i] < numbers[j]) {
+      let position = numbers[i];
+
+      numbers[i] = numbers[j];
+      numbers[j] = position;
+    }
+  }
 }
+
 console.log(numbers);
 
-//exercicio 9
+// exercicios Bônus 2
 
-for (let indexDiv = 0; indexDiv < numbers.length; indexDiv += 1) {
-   numbers[indexDiv] = numbers[indexDiv] /2;
+let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+
+for (let i = 1; i < numbers.length; i++) {
+  for (let j = 0; j < i; j++) {
+    if (numbers[i] > numbers[j]) {
+      let position = numbers[i];
+
+      numbers[i] = numbers[j];
+      numbers[j] = position;
+    }
+  }
 }
+
 console.log(numbers);

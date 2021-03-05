@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="paiDoPai">
+    <div id="pai">
+      <div id="primeiroFilho"></div>
+      <div id="elementoOndeVoceEsta">
+        <div id="primeiroFilhoDoFilho"></div>
+
+        <div id="segundoEUltimoFilhoDoFilho"></div>
+      </div>
+        Atenção!
+      <div id="terceiroFilho"></div>
+      <div id="quartoEUltimoFilho"></div>
+    </div>
+  </div>
+  <script>
+
+
+
+
+// PART 2
+// 3 - Crie um filho para primeiroFilhoDoFilho .
+let filhoDoJoao = document.querySelector('#primeiroFilhoDoFilho');
+let sectionFilha = document.createElement('div');
+sectionFilha.innerText = "Eita Eita";
+filhoDoJoao.appendChild(sectionFilha);
+
+
+// 4 -A partir desse filho criado, acesse terceiroFilho.
+// let filhoJaCriado = document.querySelector('#primeiroFilhoDoFilho').parentNode.nextElementSibling;
+// console.log(filhoJaCriado);
+
+
+
+
+
+// 2 - Crie um filho para elementoOndeVoceEsta .
+let ondeEsta = document.querySelector('#elementoOndeVoceEsta');
+let section = document.createElement('section');
+section.innerText = "Oloco meuuuuuu";
+ondeEsta.appendChild(section);
+
+//1 - Crie um irmão para elementoOndeVoceEsta
+let pai = document.querySelector('#pai'); // recupera
+let div = document.createElement('div'); // cria a div
+div.innerText = 'OI MUNDO'; // coloca conteudo
+pai.appendChild(div); // injeto no HTML
+
+
+    
+
+//     //PART 1
+// //Agora acesse o terceiroFilho a partir de pai .
+//   document.getElementById('pai').childNodes[5]
+// //Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta 
+//   document.querySelector('#elementoOndeVoceEsta').nextElementSibling
+// //acessando o Texto Atenção! a partir de elementoOndeVoceEsta
+//   document.querySelector('#elementoOndeVoceEsta').nextSibling
+// // acessando primeiroFilho a partir de elementoOndeVoceEsta
+//     document.querySelector('#elementoOndeVoceEsta').previousElementSibling
+// //troca texto do primeiro filho
+//     document.querySelector('#elementoOndeVoceEsta').firstChild.innerText = "Fala meu querido, tudo certopor ai ?";
+// // troca cor do pai
+//     document.querySelector('#elementoOndeVoceEsta').parentNode.style.backgroundColor = 'violet'
+  </script>
+</body>
+</html>

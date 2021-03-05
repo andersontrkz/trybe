@@ -105,13 +105,29 @@
       imageWeb.src = 'https://picsum.photos/200';
       imageWeb.className = 'small-image';
       divImage.appendChild(imageWeb);
-      
+
+      //exercicio 8
+      //Adicione uma lista não ordenada com os valores de 1 a 10 por extenso como valores da lista. Essa lista deve ser filha do div criado no passo 6;
+      let divP6 = document.querySelector('.right-content');
+      let arrayNumbers = [1,2,3,4,5,6,7,8,9,10];
+
+      for(let index = 0;index < arrayNumbers.length; index += 1) {
+        let numbers = arrayNumbers[index]
+        
+        //Cria a li e atribui 
+        let item = document.createElement('li');
+        item.innerHTML = numbers;
+
+        //cria ul e atribui a li criada 
+        let list = document.createElement('ul');
+        list.appendChild(item);
+        //injeta a ul na div com a classe right-content
+        divP6.appendChild(list);
+      }
 
 
 
 
-
-      console.log(elementBody);
     </script>
   </body>
 </html>

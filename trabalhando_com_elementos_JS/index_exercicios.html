@@ -57,17 +57,48 @@
   </head>
   <body>
     <script>
-      // exercicio 1
+      // exercicio 1 
+      //Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body ;
       let elementBody = document.querySelector('body');
       let textH1 = document.createElement('h1');
       textH1.innerText = 'Exercício 5.2 - JavaScript DOM';
       elementBody.appendChild(textH1);
       
-      //exercicio 2
+      //exercicio 2 
+      //Adicione a tag div com a classe main-content como filho da tag body ;
       let elementBody2 = document.querySelector('body');
       let tagDiv = document.createElement('div');
       tagDiv.className = 'main-content';
       elementBody2.appendChild(tagDiv);
+
+      // exercicio 3
+      // Adicione a tag div com a classe center-content como filho da tag div criada no passo 2;
+      let divCenterContent = document.querySelector('.main-content');
+      let centerDiv = document.createElement('div');
+      centerDiv.className = 'center-content';
+      divCenterContent.appendChild(centerDiv);
+
+      // exercicio 4 
+      //Adicione a tag p como filho do div criado no passo 3 e coloque algum texto;
+      let divTextP = document.querySelector('.center-content');
+      let pText = document.createElement('p');
+      pText.innerText = 'Esta é a tag P que injetei';
+      divTextP.appendChild(pText);
+
+      //exercicio 5
+      //Adicione a tag div com a classe left-content como filho da tag div criada no passo 2;
+      let divMain = document.querySelector('.main-content')
+      let classLeft = document.createElement('div');
+      classLeft.className = 'left-content';
+      divMain.appendChild(classLeft);
+
+      //exercicio 6
+      //Adicione a tag div com a classe right-content como filho da tag div criada no passo 2;
+      let classRight = document.createElement('div');
+      classRight.className = 'right-content';
+      divMain.appendChild(classRight);
+
+
 
 
 

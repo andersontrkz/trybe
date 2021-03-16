@@ -1,14 +1,83 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>Document</title>
+  <title>Criando formulario</title>
 </head>
+<header class="form-header">
+  <h1>Formulario para cadastro de curriculo</h1>
+  <p>preencha os campos abaixo</p>
+</header>
+
 <body>
-  
+  <form action="" method="get">
+    <div id="cv-form">
+      <div class="form-linha">
+        <fieldset>
+          <div class="linha-conteudo">  
+            <label for="nome-completo"> Nome:</label>
+            <input type="text" name="nome" id="nome-completo" size="40" maxlength="40"
+              placeholder="Digite aqui seu nome completo" autofocus required>
+          </div>
+          <div class="linha-conteudo">
+            <label for="email"> E-mail:</label>
+            <input type="email" name="email" id="e-mail" size="50" maxlength="50" placeholder="xablau@xablau.com"
+              required>
+          </div>
+          <div class="linha-conteudo">
+            <label for="cpf"> CPF:</label>
+            <input type="text" name="codigo-cpf" id="cpf" size="20" maxlength="11" placeholder="Digite somente numeros"
+              required>
+          </div>
+          <div class="linha-conteudo">
+            <label for="endereco"> Endereço:</label>
+            <input type="text" name="endereco-completo" id="endereco" size="50" maxlength="200"
+              placeholder="Rua/Avenida,numero, Bairro" required>
+          </div>
+          <div class="linha-conteudo">
+            <label for="cidade"> Cidade:</label>
+            <input type="text" name="cidade" id="cidade" size="28" maxlength="28" required>
+          </div>
+          <div class="linha-conteudo">
+            <label for="estado"> Estado:</label>
+            <select name="estado" id="estado" required></select>
+          </div>
+          <div class="linha-conteudo">
+            <legend>Tipo de casa</legend>
+            <input type="radio" name="tipo-de-casa" id="tipo-de-casa1" value="casa" required>Casa
+            <input type="radio" name="tipo-de-casa" id="tipo-de-casa2" value="apartamento" required>Apartamento
+          </div>
+        </fieldset>
+        <fieldset>
+          <div class="linha-conteudo">
+            <p>Descreva um resumo do seu ultimo emprego</p>
+            <textarea name="resumo-curriculo" id="resumo" cols="60" rows="10" maxlength="1000" required></textarea>
+          </div>
+          <div class="linha-conteudo">
+            <label for="cargo-exercido">Cargo</label>
+            <input type="text" name="cargo" id="cargo-exercido" maxlength="40" required>
+          </div>
+          <div class="linha-conteudo">
+            <label for="descricao-cargo">Descrição do Cargo</label>
+            <input type="text" name="cargo-descricao" id="descricao-cargo" maxlength="500" required>
+          </div>
+          <div class="linha-conteudo">
+            <label for="data-inicio">Data de Início</label>
+            <input type="text" name="data-de-inicio" id="data-inicio" value="" placeholder="dd/mm/aaaa" required>
+          </div>
+        </fieldset>
+        <div class="linha-conteudo">
+          <button type="submit" id="button-submit" class="btn">Enviar</button>
+          <button type="reset" id="button-reset" class="btn">Resetar</button>
+        </div>
+      </div>
+    </div>
+  </form>
   <script src="script.js"></script>
 </body>
+
 </html>

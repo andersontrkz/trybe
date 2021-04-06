@@ -93,16 +93,8 @@ const expectedResult = [
 //Construa um array de objetos a partir do array de livros. Cada objeto deve conter uma propriedade author , com o nome da pessoa autora do livro, e uma propriedade age com a idade dessa pessoa quando o livro foi lançado. O array deve ser ordenado por idade, ou seja, da pessoa mais jovem para a mais velha considerando suas idades quando o livro foi lançado.
 // Dica: use as funções map , sort
 
-//função para ordenação por idade que autor tinha no lançamento do livro---------------------
+//-----------------------------------------------------------------
 function nameAndAge() {
-  function compare(a,b) {
-    if (a.age < b.age)
-       return -1;
-    if (a.age > b.age)
-      return 1;
-    return 0;
-  }
-
   //construção do objeto propriamente dito 
   const objReturn = books.map((book) => {
     const releaseYear = book.releaseYear;
@@ -114,7 +106,8 @@ function nameAndAge() {
     }
     return newObjt;
   });
-  return objReturn.sort(compare);
+//função para ordenação por idade que autor tinha no lançamento do livro
+  return objReturn.sort((a, b) => a.age - b.age);
 }
 console.log(nameAndAge());
 

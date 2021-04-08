@@ -1,6 +1,3 @@
-// Escreva uma função shipLength que, dado um objeto representando um navio, retorna o comprimento dele, mostrando também a devida unidade de comprimento:
-// Dica: use object destructuring .
-
 const assert = require('assert');
 
 const ships = [
@@ -21,7 +18,13 @@ const ships = [
     },
 ];
 
+// Escreva uma função shipLength que, dado um objeto representando um navio, retorna o comprimento dele, mostrando também a devida unidade de comprimento:
+// Dica: use object destructuring .
+
 // escreva shipLength abaixo
+
+const shipLength = ({name, length, measurementUnit}) => `${name} is ${length} ${measurementUnit} long`;
+
 
 assert.strictEqual(shipLength(ships[0]), 'Titanic is 269.1 meters long');
 assert.strictEqual(shipLength(ships[1]), 'Queen Mary 2 is 1132 feet long');
